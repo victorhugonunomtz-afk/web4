@@ -1,0 +1,282 @@
+<html>
+    <head>
+        <title>
+            Pinturas y Pincles-Papeleria Jireh
+        </title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f5f5dc;
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('imagenes/Logo%20Tienda%20Ecológica%20Minimalista%20Beige.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0.15;
+            z-index: -1;
+        }
+        
+        .borde-exterior {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1000;
+        }   
+        
+        .borde-superior, .borde-inferior {
+            left: 0;
+            right: 0;
+            height: 30px;
+            background: #34495e;
+        }
+    
+        .borde-superior {
+            top: 0;
+            border-bottom: 2px solid #34495e;
+        }
+    
+        .borde-inferior {
+            bottom: 0;
+            border-top: 2px solid #34495e;
+        }
+    
+        .borde-izquierdo, .borde-derecho {
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            background: #34495e;
+        }
+    
+        .borde-izquierdo {
+            left: 0;
+            border-right: 2px solid #34495e;
+        }
+    
+        .borde-derecho {
+            right: 0;
+            border-left: 2px solid #34495e;
+        }
+        
+        .content-wrapper {
+            padding: 60px 40px 40px 40px;
+        }
+        
+        h1, h2 {
+            text-align: center;
+            background-color: #34495e;
+            color: white;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        .header-container {
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            padding: 70px;
+            margin: 0 -20px 30px -20px;
+            box-shadow: 0 4px 6px black;
+            border: 3px solid #2c3e50;
+            border-radius: 50px;
+            overflow: hidden;
+            position: relative;
+            background-image: url("imagenes_/arte.webp");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .header-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            border: 3px solid #34495e;
+            box-shadow: #34495e;
+            object-fit: cover;
+        }
+        
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .table-section {
+            margin: 40px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            background-color: cadetblue;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        td {
+            padding: 25px;
+            text-align: center;
+            vertical-align: top;
+            border: 2px solid #e0e0e0;
+            font-size: 15px;
+            line-height: 1.8;
+            background-color: white;
+            transition: all 0.3s ease;
+            width: 220px;
+            height: 380px;
+        }
+        
+        td:hover {
+            background-color: #f0f8ff;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(95, 158, 160, 0.2);
+        }
+        
+        td img {
+            display: block;
+            margin: 0 auto 15px auto;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        td:hover img {
+            transform: scale(1.05);
+        }
+        
+        td strong {
+            color: cadetblue;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        tr:nth-child(odd) td {
+            background-color: #fafafa;
+        }
+        
+        tr:nth-child(even) td {
+            background-color: white;
+        }
+        
+        a:link, a:visited, a:hover, a:active {
+            color: black;
+            text-decoration: none;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #34495e;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 40px 0;
+        }
+
+        .btn-volver:hover {
+            background-color: #667eea;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        @media (max-width: 768px) {
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            td {
+                min-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="borde-exterior borde-superior"></div>
+    <div class="borde-exterior borde-inferior"></div>
+    <div class="borde-exterior borde-izquierdo"></div>
+    <div class="borde-exterior borde-derecho"></div>
+    
+    <div class="table-section">
+    <div class="content-wrapper">
+        <div class="header-container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Material Artístico</h1>
+                </div>
+            </div>
+        </div>
+        
+        <center>
+        <table>
+            <tr>
+                <td><img src="imagenes_/pintura_pequeña_1.webp" width="200" height="80"><br>pintura acrilica pequeña<br>color azul marino <br>marca Politec <br>del numero 2</td>   <td><img src="imagenes_/pintura_pequeña_2.jpg"width="200" height="200"><br>pintura pequeña acrilica<br>color negro<br> marca politec</td>  <td><img src="imagenes_/pintura_pequeña_3.jpg" width="200" height="200"><br>pintura pequeña acrilica<br>color anaranjado<br>marca Politec</td> <td><img src="imagenes_/pintura_pequeña_4.jpeg" width="200" height="200"><br>pintura pequeña acrilica<br>color azul cielo<br>marca Politec<br></td> <td><img src="imagenes_/pintura_pequeña_5.jpeg" width="200" height="200"><br>pintura pequeña acrilica<br>color verde oscuro<br>marca Politec</td> <td><img src="imagenes_/pintura_pequeña_6.webp"width="200" height="200"><br>pintura pequeña acrilica<br>color verde claro<br>marca Politec</td> 
+            </tr>
+            <br>
+            <br>
+            <tr>
+                <td><img src="imagenes_/pintura_pequeña_7.jpeg" width="200" height="200"><br>pintura pequeña acrilica<br>color rosa mexicano<br>marca Politec</td> <td><img src="imagenes_/pintura_pequeña_8.webp"width="200" height="200"><br>pintura pequeña acrilica<br>color rojo marca<br>Politec</td> <td><img src="imagenes_/pintura_pequeña_9.webp"width="200" height="200"><br>pintura pequeña acrilica<br>color azul cobalto<br>marca Vinci</td> <td><img src="imagenes_/pintura_pequeña_nueva.webp"width="80" height="100"><br>pintura pequeña acrilica<br>color azul pastel<br>marca Vinci</td> <td><img src="imagenes_/pintura_pequeña_11.jpeg"width="200" height="200"><br>pintura pequeña acrilica<br>color negro marca<br>Vinci</td> <td><img src="imagenes_/pintura_pequeña_12.webp"width="200" height="200"><br>pintura pequeña acrilica<br>color amarillo claro<br>marca Vinci</td>
+            </tr>
+            <br>
+            <tr>
+                <td><img src="imagenes_/pintura_grande_1.jpeg" width="200" height="200"><br>pintura grande acrilica<br>color azul cobalto <br>marca Politec</td> <td><img src="imagenes_/pintura_grande_2.jpg"width="200" height="250"><br>pintura acrilica grande<br>color azul celeste<br>marca Politec</td> <td><img src="imagenes_/pintura_grande_3.jpg"width="200" height="250"><br>pintura acrilica grande<br>color naranjado<br>marca Politec</td> <td><img src="imagenes_/pintura_grande_4.webp"width="200" height="200"><br>pintura grande acrilica<br>color negro intenso<br>marca Politec</td> <td><img src="imagenes_/pintura_grande_5.webp"width="200" height="200"><br>pintura grande acrilica<br>color azul pastel<br>marca Politec</td> <td><img src="imagenes_/pintura_grande_6.jpg"width="200" height="200"><br>pintura grande acrilica <br>color blaco<br>marca Politec</td>
+            </tr>
+            <tr>
+                <td><img src="imagenes_/paleta_pintura_1.jpg" width="200" height="200"><br>paleta para pintura<br>plastificada chica</td> <td><img src="imagenes_/paleta_pintura_2.webp"width="200" height="250"><br>paleta para pinturas<br>plastificada chica</td> <td><img src="imagenes_/pincel_1.webp"width="200" height="250"><br>pincel del No.8</td> <td><img src="imagenes_/pincel_2.webp"width="200" height="200"><br>pincel del No.8</td> <td><img src="imagenes_/pincel_3.webp"width="200" height="200"><br>pincel del No.22</td> <td><img src="imagenes_/pincel_4.webp"width="200" height="200"><br>pincel de No.8</td>
+            </tr>
+        </table>
+        <a href="https://victorhugonunomtz-afk.github.io/web/parte_productos.html" class="btn-volver">Volver al Menú de Productos</a>
+        </center>
+        </div>
+    </div>
+</body>
+</html>

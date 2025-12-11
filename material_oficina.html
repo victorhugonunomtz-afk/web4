@@ -1,0 +1,284 @@
+<html>
+    <head>
+        <title>
+            material de Oficina-Papeleria Jireh
+        </title>
+    </head>
+
+    <body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: white;
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('imagenes/Logo%20Tienda%20Ecológica%20Minimalista%20Beige.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0.15;
+            z-index: -1;
+        }
+        
+        .borde-exterior {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1000;
+        }   
+        
+        .borde-superior, .borde-inferior {
+            left: 0;
+            right: 0;
+            height: 30px;
+            background: #2c3e50;
+        }
+    
+        .borde-superior {
+            top: 0;
+            border-bottom: 2px solid #2c3e50;
+        }
+    
+        .borde-inferior {
+            bottom: 0;
+            border-top: 2px solid #2c3e50;
+        }
+    
+        .borde-izquierdo, .borde-derecho {
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            background: #2c3e50;
+        }
+    
+        .borde-izquierdo {
+            left: 0;
+            border-right: 2px solid #2c3e50;
+        }
+    
+        .borde-derecho {
+            right: 0;
+            border-left: 2px solid #2c3e50;
+        }
+        
+        .content-wrapper {
+            padding: 60px 40px 40px 40px;
+        }
+        
+        h1, h2 {
+            text-align: center;
+            background-color: #2c3e50;
+            color: white;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        .header-container {
+            position: sticky;
+            top: 10px;
+            z-index: 100;
+            padding: 70px;
+            margin: 0 -20px 60px -20px;
+            box-shadow: 0 8px 8px black;
+            border: 3px solid #2c3e50;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            background-image: url('imagenes_/oficina.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .header-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            border: 3px solid #2c3e50   ;
+            box-shadow: 0 4px 8px black;
+            object-fit: cover;
+        }
+        
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .table-section {
+            margin: 40px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            background-color: cadetblue;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        td {
+            padding: 25px;
+            text-align: center;
+            vertical-align: top;
+            border: 2px solid #e0e0e0;
+            font-size: 15px;
+            line-height: 1.8;
+            background-color: white;
+            transition: all 0.3s ease;
+            width: 220px;
+            height: 380px;
+        }
+        
+        td:hover {
+            background-color: #f0f8ff;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(95, 158, 160, 0.2);
+        }
+        
+        td img {
+            display: block;
+            margin: 0 auto 15px auto;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        td:hover img {
+            transform: scale(1.05);
+        }
+        
+        td strong {
+            color: cadetblue;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        tr:nth-child(odd) td {
+            background-color: #fafafa;
+        }
+        
+        tr:nth-child(even) td {
+            background-color: white;
+        }
+        
+        a:link, a:visited, a:hover, a:active {
+            color: black;
+            text-decoration: none;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 40px 0;
+        }
+
+        .btn-volver:hover {
+            background-color: #667eea;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        @media (max-width: 768px) {
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            td {
+                min-width: 200px;
+            }
+        }
+    </style>
+    <div class="borde-exterior borde-superior"></div>
+    <div class="borde-exterior borde-inferior"></div>
+    <div class="borde-exterior borde-izquierdo"></div>
+    <div class="borde-exterior borde-derecho"></div>
+    <br>
+    <br>
+    <div class="table-section">
+       <div class="content-wrapper">
+        <div class="header-container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Material de Oficina</h1>
+                </div>
+            </div>
+        </div>
+        <table>
+            <tr>
+                <td><img src="imagenes_/grapa_individual.jpeg" width="200" height="200"><br>grapas individuales<br>3/8</td>   <td><img src="imagenes_/grapas_paquete.jpeg"width="200" height="200"><br>paquete de grapas<br>1/4</td>  <td><img src="imagenes_/engrapadora_1.jpeg" width="200" height="200"><br>engrapadora metalica<br>marca Pilot<br></td> <td><img src="imagenes_/engrapadora_2.jpg" width="200" height="200"><br>engrapadora pequeña<br>marca Pascua<br></td> <td><img src="imagenes_/engrapadora_3.webp" width="200" height="200"><br>engrapadora pequeña<br>marca PenGear</td> <td><img src="imagenes_/perforadora.webp"width="200" height="200"><br>perforadora de un<br>orifico marca  Pegasso</td> 
+            </tr>
+            <br>
+            <br>
+            <tr>
+                <td><img src="imagenes_/perforadora_2.jpeg" width="200" height="200"><br>perforadora dual<br>marca Smart</td> <td><img src="imagenes_/perforadora_3.webp"width="300" height="200"><br>perforadora de tres<br> agujeros marca Mae</td> <td><img src="imagenes_/sobre_1.webp"width="200" height="200"><br>sobre tamaño carta</td> <td><img src="imagenes_/sobre_2.jpg"width="200" height="200"><br>sobre para dinero</td> <td><img src="imagenes_/carpeta_1.webp"width="200" height="200"><br>Carpeta para trabajos<br>marca Ofice Max</td> <td><img src="imagenes_/carpeta_2.gif"width="200" height="200"><br>Carpeta para trabajos<br>marca Scribe</td>
+            </tr>
+            <br>
+            <tr>
+                <td><img src="imagenes_/carpeta_3.webp" width="200" height="200"><br>paquete de lapices<br>tiza roja de marca <br>Paper Mate</td> <td><img src="imagenes_/calculadora_1.jpg"width="200" height="250"><br>paquete de lapices<br>tiza roja marca<br>Paper Mate</td> <td><img src="imagenes_/calculadora_2.webp"width="200" height="250"><br>paquete de lapices marca<br> Kores tiza roja</td> <td><img src="imagenes_/hojas_carpeta_1.webp"width="200" height="200"><br>hojas para carpeta<br>cuadriaculada 7mm<br>marca Rayter</td> <td><img src="imagenes_/hojas_carpeta_2.webp"width="200" height="200"><br>hojas para carpeta<br>cuadriculada 5mm<br>marca Scribe</td> <td><img src="imagenes_/hojas_carpeta_3.jpg"width="200" height="200"><br>hojas para carpeta<br>sin cuadricular</td>
+            </tr>
+            <tr>
+                <td><img src="imagenes_/nota_adesiva_1.webp" width="200" height="200"><br>Notas adesivas<br>multicolor</td> <td><img src="imagenes_/notas_adesivas_2.jpeg"width="200" height="250"><br>Notas adesivas<br>marca Zheng</td> <td><img src="imagenes_/cinta_1.jpeg"width="200" height="250"><br>cinta adesiva<br>marca Dixon</td> <td><img src="imagenes_/cinta_2.webp"width="200" height="200"><br>cinta adesiva<br>marca Scotch</td> <td><img src="imagenes_/sujetador_documento_1.jpeg"width="200" height="200"><br>sujetador de documentos</td> <td><img src="imagenes_/paquete_sujetat.jpeg"width="200" height="200"><br>paquete de sujetadores<br>para documentos marca Mae</td>
+            </tr>
+        </table>
+       <center>
+       <a href="parte_productos.html" class="btn-volver">Volver al Menú de Productos</a>
+       </center>
+       </div>
+       <br>
+       <br>
+
+    </body>
+</html>
