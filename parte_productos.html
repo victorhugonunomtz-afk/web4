@@ -1,0 +1,150 @@
+
+<html>
+<head>
+    <title>Papeleria Jireh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } 
+        
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .borde-exterior {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1000;
+        }   
+        
+        .borde-superior, .borde-inferior {
+            left: 0;
+            right: 0;
+            height: 30px;
+            background: #34495e;
+        }
+    
+        .borde-superior {
+            top: 0;
+            border-bottom: 2px solid #34495e;
+        }
+    
+        .borde-inferior {
+            bottom: 0;
+            border-top: 2px solid #34495e;
+        }
+    
+        .borde-izquierdo, .borde-derecho {
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            background: #34495e;
+        }
+    
+        .borde-izquierdo {
+            left: 0;
+            border-right: 2px solid #34495e;
+        }
+    
+        .borde-derecho {
+            right: 0;
+            border-left: 2px solid #34495e;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('imagenes/Logo Tienda Ecológica Minimalista Beige.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0.15;
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .categorias-lista {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .categorias-lista li {
+            margin-bottom: 20px;
+        }
+        
+        .categorias-lista a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            font-size: 50px;
+            padding: 20px 30px;
+            background-color: #34495e;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-align: left;
+            border-left: 5px solid #667eea;
+            color: white;
+            text-indent: 15px;
+        }
+        
+        .categorias-lista a:hover {
+            background-color: #667eea;
+            transform: translateX(10px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="borde-exterior borde-superior"></div>
+    <div class="borde-exterior borde-inferior"></div>
+    <div class="borde-exterior borde-izquierdo"></div>
+    <div class="borde-exterior borde-derecho"></div>
+    
+    <br>
+    <br>
+    
+    <div class="container">
+        <center>
+            <h1>Papeleria Jireh</h1>
+        </center>
+        
+        <ul class="categorias-lista">
+            <li>
+                <a href="material_escolar.html" target="_parent">Material escolar</a>
+            </li>
+            <li>
+                <a href="material_oficina.html" target="_parent">Material de oficina</a>
+            </li>
+            <li>
+                <a href="material_artisitico.html" target="_parent">Material artistico</a>
+            </li>
+            <li>
+                <a href="material_recreativo.html" target="_parent">Material recreativo y otros</a>
+            </li>
+            <li>
+                <a href="index.html" target="_parent">Volver al inicio</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

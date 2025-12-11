@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>Papeleria Jireh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background:#34495e;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            max-width: 700px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .header {
+            background: #34495e;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 30px;
+            max-height: 60vh;
+            overflow-y: auto;
+            line-height: 1.8;
+        }
+        .content h2 {
+            color: #000000;
+            margin: 20px 0 10px 0;
+            font-size: 18px;
+        }
+        .content p {
+            color: #000000;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .footer {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+            text-align: center;
+        }
+        .btn-aceptar {
+            padding: 15px 50px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s;
+            background: #34495e;
+            color: white;
+        }
+        .btn-aceptar:hover {
+            background: #34495e;
+            transform: translateY(-2px);
+            box-shadow:#34495e;
+        }
+        .content::-webkit-scrollbar {
+            width: 8px;
+        }
+        .content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .content::-webkit-scrollbar-thumb {
+            background: #34495e;
+            border-radius: 10px;
+        }
+        .content::-webkit-scrollbar-thumb:hover {
+            background: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Uso de la página</h1>
+            <p>Papelería Jireh</p>
+        </div>
+        <div class="content">
+            <h2>1. Cómo usar la página</h2>
+            <p>Al ingresar verá en el lado lateral izquierdo un menú, ingrese al que esté interesado.</p>
+            <h2>2. Características de la página</h2>
+            <p>La página está diseñada para proyectar de manera general los productos del negocio, en caso de no encontrar uno o no ser de su agrado, acérquese a un encargado de manera física para preguntar por el producto.</p>
+            <h2>3. Productos y precios</h2>
+            <p>La página no tiene como función servir como un medio de ventas en línea, por lo tanto, esta página solo funciona para presentar los productos con los que cuenta el negocio no necesitando una cuenta para registrarse o un medio de pago para la solicitud y compra de un producto.</p>
+            <h2>4. Limitación de responsabilidad</h2>
+            <p>En ningún caso Papelería Jireh será responsable por daños directos, indirectos, incidentales, especiales o consecuentes que resulten del uso o la imposibilidad de usar nuestros productos o servicios.</p>
+        </div>
+        <div class="footer">
+            <button class="btn-aceptar" onclick="aceptar()">He leído, Continuar</button>
+        </div>
+    </div>
+    <script>
+        function aceptar() {
+            sessionStorage.setItem('terminosAceptados', 'true');
+            window.location.href = 'principal.html';
+        }
+    </script>
+</body>
+</html>

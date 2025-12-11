@@ -1,0 +1,229 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sobre Nosotros - Papelería Jireh</title>
+    <style>
+        body {
+            background-color: #f8f9fa; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #34495e;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        p {
+            font-size: 1.1em;
+            text-align: justify;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .marcas-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .marcas-section h3 {
+            color: #34495e;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .marcas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .marca-item {
+            background-color:#34495e;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .marca-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .ubicacion-section {
+            background-color: #34495e;
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .ubicacion-section h1 {
+            color: white;
+            border-bottom: 3px solid white;
+        }
+
+        .ubicacion-section p {
+            color: white;
+            font-size: 1.2em;
+        }
+        .map-container {
+            margin-top: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        .social-media {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #f8f9fa;
+            margin-top: 40px;
+        }
+
+        .social-media h2 {
+            color: #34495e;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .social-icon svg {
+            width: 60px;
+            height: 60px;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-icon:hover svg {
+            opacity: 0.8;
+        }
+    </style>
+</head>    
+
+<body>
+    <div class="container">
+        <h1>Sobre Nosotros</h1>
+        
+        <p>
+            Somos un negocio ubicado en Paseos del Bosque, Cuautitlán de Romero Rubio. 
+            Nos dedicamos a la venta de útiles escolares proporcionando precios justos y 
+            productos de calidad.
+        </p>
+        <center>
+        <img src="imagenes/papeleria_fondo.webp" alt="local de la empresa" width="300" height="400">
+        </center>
+        <p>
+            Desde los inicios de nuestro negocio buscamos otorgar a los estudiantes de 
+            nuestros alrededores la oportunidad de gastar menos y obtener más. Por eso 
+            nos dedicamos a buscar marcas que ofrecieran lo que buscan los estudiantes: 
+            algo duradero y de costo bajo.
+        </p>
+        
+        <div class="marcas-section">
+            <h3>Marcas que Manejamos:</h3>
+            <div class="marcas-grid">
+                <div class="marca-item">BIC</div>
+                <div class="marca-item">Norma</div>
+                <div class="marca-item">Stronc</div>
+                <div class="marca-item">Crayola</div>
+                <div class="marca-item">Paper Mate</div>
+                <div class="marca-item">Berol</div>
+            </div>
+        </div>
+        
+        <p>
+            Y si bien, no estamos afiliados a este tipo de marcas, a través de 
+            comerciantes que sirven como intermediarios, nos han ayudado a cumplir uno 
+            de nuestros objetivos principales.
+        </p>
+    </div>
+
+    <div class="ubicacion-section">
+        <h1>¿Dónde Estamos?</h1>
+        <p>
+            Nos encontramos en Cuautitlán, en Paseos del Bosque<br>
+            Entre los locales al frente del jardin de niños "Diego Rivera" y CECyTEM
+        </p>
+        <br>
+        <p>Manzana 009, Paseos del Bosque, 54850 México, Méx.</p>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.8!2d-99.1!3d19.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f3e0cb0d9a01%3A0x318e0cb0d9a0107e!2sPapeler%C3%ADa%20Jireh!5e0!3m2!1ses!2smx!4v1234567890" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+    <div class="social-media">
+        <h2>Síguenos en Redes Sociales</h2>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/papejireh16/" target="_blank" class="social-icon" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1877f2">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/_papeleriajireh/" target="_blank" class="social-icon" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="url(#instagram-gradient)">
+                    <defs>
+                        <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#f09433;stop-opacity:1" />
+                            <stop offset="25%" style="stop-color:#e6683c;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#dc2743;stop-opacity:1" />
+                            <stop offset="75%" style="stop-color:#cc2366;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#bc1888;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+        </a>
+    </div>
+    </div>
+</body>
+</html>

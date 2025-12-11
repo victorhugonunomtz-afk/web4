@@ -1,0 +1,323 @@
+<html>
+    <head>
+        <title>
+            Plumas y Plumones-Papeleria Jireh
+        </title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: white;
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            padding: 20px;
+        }
+        .page-link {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .page-link:hover {
+            background-color: #2c3e50;
+            transform: translateY(-3px);
+        }
+
+        .page-link.active {
+            background-color: cadetblue;
+            font-weight: bold;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('imagenes/Logo%20Tienda%20Ecológica%20Minimalista%20Beige.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0.15;
+            z-index: -1;
+        }
+        
+        .borde-exterior {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1000;
+        }   
+        
+        .borde-superior, .borde-inferior {
+            left: 0;
+            right: 0;
+            height: 30px;
+            background: #2c3e50;
+        }
+    
+        .borde-superior {
+            top: 0;
+            border-bottom: 2px solid #2c3e50;
+        }
+    
+        .borde-inferior {
+            bottom: 0;
+            border-top: 2px solid #2c3e50;
+        }
+    
+        .borde-izquierdo, .borde-derecho {
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            background: #2c3e50;
+        }
+    
+        .borde-izquierdo {
+            left: 0;
+            border-right: 2px solid #2c3e50;
+        }
+    
+        .borde-derecho {
+            right: 0;
+            border-left: 2px solid #2c3e50;
+        }
+        
+        .content-wrapper {
+            padding: 60px 40px 40px 40px;
+        }
+        
+        h1, h2 {
+            text-align: center;
+            background-color: #2c3e50;
+            color: white;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        .header-container {
+            position: sticky;
+            top: 50px;
+            z-index: 100;
+            background-color: white;
+            padding: 20px;
+            margin: 0 -20px 30px -20px;
+            box-shadow: 0 4px 6px black;
+            border: 3px solid #2c3e50;
+            border-radius: 10px;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .header-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            border: 3px solid #2c3e50;
+            box-shadow: 0 4px 8px black;
+            object-fit: cover;
+        }
+        
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .header-container {
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            padding: 70px;
+            margin: 0 -20px 30px -20px;
+            box-shadow: 0 4px 6px black;
+            border: 3px solid #2c3e50;
+            border-radius: 50px;
+            overflow: hidden;
+            background-image: url('imagenes/didactico_2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }        
+        .table-section {
+            margin: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+    table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            }
+
+    td {
+        padding: 25px;
+        text-align: center;
+        vertical-align: top;
+        border: 2px solid #e0e0e0;
+        font-size: 15px;
+        line-height: 1.8;
+        background-color: white;
+        transition: all 0.3s ease;
+        width: 220px;
+        height: 380px;
+    }
+
+    td:hover {
+            background-color: #f0f8ff;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(95, 158, 160, 0.2);
+        }
+
+    td img {
+        display: block;
+        margin: 0 auto 15px auto;
+        border-radius: 8px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease;
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    td:hover img {
+        transform: scale(1.05);
+    }
+
+    td strong {
+        color: cadetblue;
+        font-size: 16px;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    tr:nth-child(odd) td {
+        background-color: #fafafa;
+    }
+    tr:nth-child(even) td {
+        background-color: white;
+    }
+    a:link, a:visited, a:hover, a:active {
+        color: black;
+        text-decoration: none;
+    }
+
+    .btn-volver {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: #2c3e50;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        margin: 40px 0;
+    }
+
+    .btn-volver:hover {
+        background-color: #667eea;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+@media (max-width: 768px) {
+        table {
+            display: block;
+            overflow-x: auto;
+        }
+            
+        td {
+                min-width: 200px;
+            }
+        }
+    </style>
+    <body>
+    <div class="borde-exterior borde-superior"></div>
+    <div class="borde-exterior borde-inferior"></div>
+    <div class="borde-exterior borde-izquierdo"></div>
+    <div class="borde-exterior borde-derecho"></div>
+        <center>
+            <br>
+            <br>
+            <div class="table-section">
+            <div class="content-wrapper">
+            <div class="header-container">
+            <div class="header-content">
+            <div class="header-text">
+            <h1 style="display: inline-block;background-color: cadetblue;">Plumas y Plumones</h1>
+            </div>
+            </div>
+            </div>
+            <br>
+        </center>
+        <center>
+        <table>
+            <tr>
+                <td><img src="imagenes/pluma_1.webp" width="200" height="200"><br>Pluma tinta negra<br>marca Razor<br>0.7 mm</td>   <td><img src="imagenes/pluma_2.webp"width="200" height="200"><br>Pluma tinta roja<br>marca Razor<br>0.7 mm</td>  <td><img src="imagenes/pluma_3.webp" width="200" height="200"><br>Pluma tinta azul<br>marca Razor<br>0.7 mm</td> <td><img src="imagenes/pluma_4.jpg" width="200" height="200"><br>Pluma tinta negra <br>marca Bic<br>punto fino</td> <td><img src="imagenes/pluma_5.jpg" width="200" height="200"><br>pluma tinta roja<br>marca bic <br>punto fino</td> <td><img src="imagenes/pluma_6.webp" width="200" height="200"><br>pluma tinta azul<br>marca bic<br>punto fino</td> 
+            </tr>
+            <br>
+            <br>
+            <tr>
+                <td><img src="imagenes/pluma_7.webp" width="200" height="200"><br>pluma tinta negra <br>marca Razor<br>de 1.0 mm</td> <td><img src="imagenes/pluma_8.jpeg"width="200" height="200"><br>pluma tinta roja<br>marca Razor<br>de 1.0 mm</td> <td><img src="imagenes/pluma_9.png"width="200" height="200"><br>pluma tinta azul<br>marca Razor<br> de 1.0 mm</td> <td><img src="imagenes/paquete_plumas_1.jpeg"width="200" height="200"><br>paquete de plumas<br>punto fino<br>marca Bic</td> <td><img src="imagenes/paquete_plumas_2.webp"width="200" height="200"><br>paquete de plumas<br> punta 1.0mm<br>marca Razor</td> <td><img src="imagenes/paquete_plumas_3.webp"width="200" height="200"><br>paquete de plumas<br> marca Paper Mate</td>
+            </tr>
+            <br>
+            <tr>
+                <td><img src="imagenes/paquete_plumas_4.jpg" width="200" height="200"><br>paquete de plumas<br>marca Glitter Pen <br>Paper Mate</td> <td><img src="imagenes/plumon_1.avif"width="200" height="250"><br>Plumón negro para<br>pizarrón marca<br>Razor</td> <td><img src="imagenes/plumon_2.jpeg"width="200" height="250"><br>Plumón azul para<br>pizzarón marca<br>Razor</td> <td><img src="imagenes/plumon_3.webp"width="200" height="200"><br>Plumón rojo para<br>pizarrón marca<br>Razor</td> <td><img src="imagenes/plumon_4.jpg"width="200" height="200"><br>plumon negro permanente<br> marca Sharpie</td> <td><img src="imagenes/plumon_5.png"width="200" height="200"><br>plumón azul permanente<br> marca Sharpie</td>
+            </tr>
+            <tr>
+                <td><img src="imagenes/plumon_6.webp" width="200" height="200"><br>plumón rojo permanente<br>marca Sharpie</td> <td><img src="imagenes/paquete_plumones_1.webp"width="200" height="250"><br>paquete de plumones para<br> pizzarón marca Sharpie</td> <td><img src="imagenes/paquete_plumones_2.webp"width="200" height="250"><br>paquete de plumones para<br> pizzrón marca Razon</td> <td><img src="imagenes/paquete_plumones_3.webp"width="200" height="200"><br>paquete de plumones permanentes <br>marca Sharpie</td> <td><img src="imagenes/paquete_plumones_4.webp"width="200" height="200"><br>paquete de plumones permanentes<br> marca Norma</td> <td><img src="imagenes/paquete_plumones_5.webp"width="200" height="200"><br>paquete de plumones permanentes<br> marca Sharpie</td>
+            </tr>
+        </table>
+        <a href="parte_productos.html" class="btn-volver">Volver al Menú de Productos</a>
+        </center>
+        <br>
+        <br>
+    <div class="pagination">
+    <a href="material_escolar.html" class="page-link">1</a>
+    <a href="material_escolar2.html" class="page-link active">2</a>
+    </div>
+    </body>
+</html>
